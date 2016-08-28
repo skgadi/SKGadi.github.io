@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>SKGadi's eLibrary</title>
+	<link rel="stylesheet" href="gsk-libs/css/font-cm.css">
+	<link rel="stylesheet" href="gsk-libs/css/font-uc.css">
+	<link rel="stylesheet" href="gsk-libs/css/web-style.css">
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="bibtex_js.js" type="text/javascript" charset="utf-8"></script>
+	<bibtex src="bibtex/skgadi-library.bib"></bibtex>
+</head>
+<body>
+	<div class="wrapper">
+	<header>
+	<h1>Suresh Kumar Gadi</h1>
+	<p>Website of Suresh Kumar Gadi</p>
+	<p class="view"><a href="https://github.com/skgadi">View the Project on GitHub <small>skgadi</small></a></p>
+	<ul>
+	<li class="single"><a href="http://skgadi.com">Visit <strong>SKGadi</strong></a></li>
+	<li class="single"><a href="https://github.com/skgadi/">Visit <strong>GitHub</strong></a></li>
+	</ul>
+	</header>
+		<section>
+			<div class="searchbar">
+					<input style="width: 100%; font-family: 'Univers57Condensed';" type="text" class="bibtex_search form-control" id="searchbar" placeholder="Search publications - Example: journal 2015 (finds the intersection of the two terms)">
+					<br/>
+					<div style = "align-text: center;">
+					<select id="authorselectfirst" class="bibtex_search bibtex_author" style="font-family: 'Univers57Condensed';" extra="first" search="author">
+						<option value="">Search First Author</option>
+					</select>
+					<select id="authorselect" class="bibtex_search bibtex_author" style="font-family: 'Univers57Condensed';" search="author">
+						<option value="">Search Author</option>
+					</select>
+					<select id="topicselect" class="bibtex_search" style="font-family: 'Univers57Condensed';">
+						<option value="">Search Topic</option>
+						<!-- Add topic values here -->
+						<option value="Autonomy">Autonomy</option>
+						<option value="Symbiotic">Symbiotic Autonomy</option>
+						<option value="CoBot|localization|Coltin|Rosenthal|Perera">CoBot</option>
+						<option value="Learning">Learning</option>
+						<option value="Multiagent">Multiagent Systems</option>
+						<option value="Multi-robot|Multirobot|soccer|Multiagent">Multirobot Systems</option>
+						<option value="Planning">Planning</option>
+						<option value="Robot">Autonomous Robots</option>
+						<option value="Localization">Robot Localization</option>
+						<option value="Soccer|Multi-robot">Robot Soccer</option>
+						<option value="Vision">Vision</option>
+					</select>
+					<button style="font-family: 'Univers57Condensed';" type="button" class="" onclick="reset()">Reset</button>
+					</div>
+					<br/><br/><br/>
+			</div>
+
+
+			<div class="bibtex_structure">
+				<div class="group year" extra="ASC number">
+					<a href="#top" style="display: inline"><em>(Top of the page)</em></a>
+					<div style="padding-bottom:10px;"></div>
+					<div class="sort journal" extra="DESC string">
+						<div class="templates"></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="bibtex_display" style="font-family: 'cmu_serif'; text-align: justify;">
+				<div class="if bibtex_template" style="display: none;">
+					<ul> <li>
+						<span class="if journal !nolink">
+							<a class="bibtexVar" href="https://mega.nz/#fm/search/+BIBTEXKEY+" extra="BIBTEXKEY">
+								<span style="text-decoration: underline;" class="title"></span>,
+							</a>
+						</span>
+						<span class="if title nolink">
+							<span class="title"></span>,
+						</span>
+						<div class="if author">
+							<span class="author"></span>
+						</div>
+						<div>
+							<span class="if journal"><em><span class="journal"></span></em>,</span>
+							<span class="if booktitle">In <em><span class="booktitle"></span></em>,</span>
+							<span class="if editor"><span class="editor"></span> (editors),</span>
+							<span class="if publisher"><em><span class="publisher"></span></em>,</span>
+							<span class="if !journal number">Technical report <span class="number"></span>,</span>
+							<span class="if institution"><span class="institution"></span>,</span>
+							<span class="if address"><span class="address"></span>,</span>
+							<span class="if volume"><span class="volume"></span>,</span>
+							<span class="if journal number">(<span class="number"></span>),</span>
+							<span class="if pages"> pages <span class="pages"></span>,</span>
+							<span class="if month"><span class="month"></span>,</span>
+							<span class="if year"><span class="year"></span>.</span>
+							<span class="if note"><span class="note"></span>.</span>
+							<a class="bibtexVar" role="button" data-toggle="collapse" href="#bib+BIBTEXKEY+" aria-expanded="false" aria-controls="bib+BIBTEXKEY+" extra="BIBTEXKEY">
+							[bib]
+							</a>
+						</div>
+						<div class="bibtexVar collapse" id="bib+BIBTEXKEY+" extra="BIBTEXKEY">
+							<div class="well">
+								<pre><span class="bibtexraw noread"></span></pre>
+							</div>
+						</div>
+						<div style="display:none"><span class="bibtextype"></span></div>
+					</li></ul>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer>
+		<p>Hosted on GitHub Pages.</p>
+		<p>The original theme <a href="https://github.com/orderedlist">orderedlist</a> is modified by SKGadi.</p>
+	</footer>
+	<!--[if !IE]><script>fixScale(document);</script><![endif]-->
+	
+	<script>
+		/*$(function() {
+		  $("#Fontselector").on("change",function() {
+			var font = $("#Fontselector option:selected").text();
+			console.log(font);
+
+			$('.title.fonters').each(function() {
+				$(this).css("font-family",font);
+			});
+		  }); 
+		});  */ 
+		function reset() {
+			$("select").each(function () {
+			  localStorage.setItem($(this).attr("id"),"");
+			  $(this).val("");
+			}); 
+			$("#searchbar").val("");
+			$("#searchbar").trigger('change');
+		}
+	</script>
+
+</body>
+</html>

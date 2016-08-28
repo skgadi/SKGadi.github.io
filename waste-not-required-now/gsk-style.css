@@ -1,0 +1,45 @@
+/*Font style*/
+@font-face {
+    font-family: 'cmu_serif';
+    src: url('http://skgadi.com/000-packages/skgadi-lib/css/fonts-cms/cmunbx-webfont.eot');
+    src: url('http://skgadi.com/000-packages/skgadi-lib/css/fonts-cms/cmunbx-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://skgadi.com/000-packages/skgadi-lib/css/fonts-cms/cmunbx-webfont.woff') format('woff'),
+         url('http://skgadi.com/000-packages/skgadi-lib/css/fonts-cms/cmunbx-webfont.ttf') format('truetype'),
+         url('http://skgadi.com/000-packages/skgadi-lib/css/fonts-cms/cmunbx-webfont.svg#cmu_serifbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'cmu_serif';
+    src: url('http://skgadi.com/000-packages/skgadi-lib/css/fonts-cms/cmunrm-webfont.eot');
+    src: url('http://skgadi.com/000-packages/skgadi-lib/css/fonts-cms/cmunrm-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://skgadi.com/000-packages/skgadi-lib/css/fonts-cms/cmunrm-webfont.woff') format('woff'),
+         url('http://skgadi.com/000-packages/skgadi-lib/css/fonts-cms/cmunrm-webfont.ttf') format('truetype'),
+         url('http://skgadi.com/000-packages/skgadi-lib/css/fonts-cms/cmunrm-webfont.svg#cmu_serifroman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'cmu_serif';
+    src: url('http://skgadi.com/000-packages/skgadi-lib/css/fonts-cms/cmunbi-webfont.eot');
+    src: url('http://skgadi.com/000-packages/skgadi-lib/css/fonts-cms/cmunbi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://skgadi.com/000-packages/skgadi-lib/css/fonts-cms/cmunbi-webfont.woff') format('woff'),
+         url('http://skgadi.com/000-packages/skgadi-lib/css/fonts-cms/cmunbi-webfont.ttf') format('truetype'),
+         url('http://skgadi.com/000-packages/skgadi-lib/css/fonts-cms/cmunbi-webfont.svg#cmu_serifbolditalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'cmu_serif';
+    src: url('http://skgadi.com/000-packages/skgadi-lib/css/fonts-cms/cmunti-webfont.eot');
+    src: url('http://skgadi.com/000-packages/skgadi-lib/css/fonts-cms/cmunti-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://skgadi.com/000-packages/skgadi-lib/css/fonts-cms/cmunti-webfont.woff') format('woff'),
+         url('http://skgadi.com/000-packages/skgadi-lib/css/fonts-cms/cmunti-webfont.ttf') format('truetype'),
+         url('http://skgadi.com/000-packages/skgadi-lib/css/fonts-cms/cmunti-webfont.svg#cmu_serifitalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+h1, h2, h3, h4, h5, h6, p, a, ul, ol, dl, input[type=text], input[type=password], textarea, body, html,#header input#s, .Header h1, h3.post-title, .comments h4, .tabs-inner .widget li a {
+font-family: cmu_serif;
+//color: #000;
+}
