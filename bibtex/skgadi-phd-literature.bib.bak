@@ -1,0 +1,14 @@
+% Encoding: UTF-8
+
+@Comment{jabref-meta: databaseType:bibtex;}
+
+@Comment{jabref-meta: fileDirectory:../../Library/skgadi-phd-literature;}
+
+@Comment{jabref-meta: protectedFlag:true;}
+
+@Comment{jabref-meta: saveActions:enabled;
+pages[normalize_page_numbers]
+month[normalize_month]
+abstract[html_to_latex]
+booktitle[ordinals_to_superscript]
+;}

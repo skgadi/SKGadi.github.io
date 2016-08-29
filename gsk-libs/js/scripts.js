@@ -87,6 +87,8 @@ $(document).ready(function () {
 		north__resizable : false,
 		south__resizable : false
 	});
+	
+	$('#NavBarHere').load('nav.html');
 });
 
 function DisplayItem(id) {

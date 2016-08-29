@@ -1,17 +1,17 @@
 % Encoding: UTF-8
+
 @InProceedings{Gadi2012a,
   author    = {S. K. Gadi and R. Lozano and R. Garrido and A. Osorio},
   title     = {{Stability Analysis and Experiments for a Force Augmenting Device}},
-  booktitle = {2012 9th International Conference on Electrical Engineering, Computing Science and Automatic Control (CCE)},
+  booktitle = {2012 9\textsuperscript{th} International Conference on Electrical Engineering, Computing Science and Automatic Control (CCE)},
   year      = {2012},
   pages     = {1--6},
-  month     = {sep},
+  month     = sep,
   publisher = {Institute of Electrical {\&} Electronics Engineers ({IEEE})},
   abstract  = {We present preliminary results of a one degree of freedom (DOF) linear moving force augmenting device (FAD) with a force sensor for enhancing the lifting capabilities of a human user. We perform a stability test of the feedback loop formed by the device and a model of the human operator. It is shown that the operator lifts a small fraction of the total weight of the load. The proposed control scheme is illustrated using numerical simulations and an experiment.},
   doi       = {10.1109/iceee.2012.6421189},
-  file      = {:..\\..\\Library\\skgadi-articles\\Gadi2012 - Stability analysis and experiments for a force augmenting device.pdf:PDF},
+  file      = {Gadi2012a - Stability Analysis and Experiments for a Force Augmenting Device.pdf:..\\..\\Library\\skgadi-articles\\Gadi2012a - Stability Analysis and Experiments for a Force Augmenting Device.pdf:PDF},
   keywords  = {force feedback;force sensors;lifting equipment;stability;FAD;feedback loop;force sensor;lifting capability enhancement;load handling;numerical simulation;one-DOF linear moving force augmenting device;one-degree of freedom linear moving force augmenting device;stability analysis;Force;Force sensors;Humans;Mathematical model;Stability analysis;Torque;Trajectory;Exoskeleton;force augmenting device;load handling},
-  url       = {http://dx.doi.org/10.1109/ICEEE.2012.6421189},
 }
 
 @MastersThesis{Gadi2009a,
@@ -24,7 +24,7 @@
 The advancement of virtual instrument allows us to perform more complex testing operations. This project also deals with developing an test equipment which is responsible of testing complex functionalities like GSM communication (multi threading operations), handling multiple grounds effectively (implementing complex algorithms), connecting database and making database available for analysis (manipulating database over network).
 
 Identifying the System transfer function gives the detail information of the system. In this project we have attempted to automate the process of identifying the transfer function of an electrical system.},
-  file     = {:..\\..\\Library\\skgadi-articles\\Gadi2009a - Design of factory floor tester for HVAC controller and Remote Monitoring Unit.pdf:PDF},
+  file     = {Gadi2009a -  Design of Factory Floor Tester for HVAC Controller and Remote Monitoring Unit.pdf:..\\..\\Library\\skgadi-articles\\Gadi2009a -  Design of Factory Floor Tester for HVAC Controller and Remote Monitoring Unit.pdf:PDF},
 }
 
 @InProceedings{Gadi2013a,
@@ -33,28 +33,26 @@ Identifying the System transfer function gives the detail information of the sys
   booktitle    = {Volume 12: Systems and Design},
   year         = {2013},
   pages        = {1--9},
-  month        = {nov},
+  month        = nov,
   organization = {American Society of Mechanical Engineers},
   publisher    = {{ASME} International},
   abstract     = {This paper presents a stability analysis of the interaction between a human and a linear moving Force Augmenting Device (FAD). The analysis employs the mathematical models of the human, the FAD and their interaction. As a depart from past works, this article presents a stability analysis considering time-delays in the human model. A key ingredient in the analysis is the use of the Rekasius substitution for replacing the time-delay terms. It is proved that the human machine interaction is stable when the human model has no delays. The analysis provides an upper bound for the time-delays preserving a stable interaction. Numerical simulations allow to assess the human-FAD interaction. An experiment is performed with a laboratory prototype, where a human operator lifts a load. It is observed that the human machine interaction is stable and the human operator is able to move the load to its desired position by experiencing very little effort.},
   doi          = {10.1115/imece2013-63751},
-  file         = {:..\\..\\Library\\skgadi-articles\\Gadi2013a -  Stability Analysis for a Force Augmenting Device Considering Delays in the Human Model.pdf:PDF},
-  url          = {http://dx.doi.org/10.1115/imece2013-63751},
+  file         = {Gadi2013a -  Stability Analysis for a Force Augmenting Device Considering Delays in the Human Model.pdf:..\\..\\Library\\skgadi-articles\\Gadi2013a -  Stability Analysis for a Force Augmenting Device Considering Delays in the Human Model.pdf:PDF},
 }
 
 @InProceedings{Gadi2014b,
   author    = {Suresh K. Gadi and Antonio Osorio and Rogelio Lozano},
   title     = {{ {Study of the Interaction between a One Degree of Freedom Force Augmenting Device and a Human Operator} }},
-  booktitle = {2014 18th International Conference on System Theory, Control and Computing ({ICSTCC})},
+  booktitle = {2014 18\textsuperscript{th} International Conference on System Theory, Control and Computing ({ICSTCC})},
   year      = {2014},
   pages     = {7--12},
-  month     = {oct},
+  month     = oct,
   publisher = {Institute of Electrical {\&} Electronics Engineers ({IEEE})},
   abstract  = {In this paper a one degree of freedom (DOF) force augmenting device (FAD) is presented. A laboratory set-up has been built and some tests of the interaction between the FAD and a user were performed. The stability of the closed loop system is essential for the performance of the FAD. The FAD by itself is a stable device, but what is important is to assure the stability of the interaction between the FAD and a human being. To deal with this matter, two situations were analyzed. The case of no delays in the model is first considered. This situation might appear unrealistic, for this reason, a second analysis is performed considering a human model with delays. In order to deal with delays a Rekasius substitution is used. To perform the stability analysis, it is sufficient to apply the Routh-Hurtwitz criteria. Attempts with other techniques have given more conservative stability results. The stability has been proven for delays smaller than upper-bounds which have been computed. None of these upper-bounds are reached by any healthy human being. Therefore, we can assure that the whole system is stable for most of the practical situations. This proves the robustness of the closed loop system with respect to delays. In real time experiments, measurement from the sensors are normally noisy. In order to reduce the effect of the noise, a low pass filter was included. The introduction of this filter alters the order of the system, changing the stability conditions of the whole set up. So the stability analysis is performed again with the inclusion of the filter.},
   doi       = {10.1109/icstcc.2014.6982382},
-  file      = {:..\\..\\Library\\skgadi-articles\\Gadi2014b - Study of the interaction between a one degree of freedom force augmenting device and a human operator.pdf:PDF},
+  file      = {Gadi2014b -  Study of the Interaction between a One Degree of Freedom Force Augmenting Device and a Human Operator.pdf:..\\..\\Library\\skgadi-articles\\Gadi2014b -  Study of the Interaction between a One Degree of Freedom Force Augmenting Device and a Human Operator.pdf:PDF},
   keywords  = {closed loop systems;man-machine systems;stability;DOF;FAD;Rekasius substitution;Routh-Hurtwitz criteria;closed loop system;human operator;one degree of freedom force augmenting device;stability analysis;Delays;Force;Laboratories;Mathematical model;Spinal cord;Stability criteria},
-  url       = {http://dx.doi.org/10.1109/ICSTCC.2014.6982382},
 }
 
 @PhdThesis{Gadi2014a,
@@ -74,7 +72,18 @@ substitution for replacing the time-delay terms. It is proved that the FAD-HA in
 stable interaction is assured.
 
 Numerical simulations are presented, which allow assessing the FAD-HA interaction. Experimentation is performed with a laboratory prototype with which several human operators lift a load. It is observed that the FAD-HA interaction is stable and that the human operator is able to lift the load to its desired position by experiencing an effort that can always be controlled.},
-  file     = {:..\\..\\Library\\skgadi-articles\\Gadi2014a - Modelado y control de un dispositivo de aumento de fuerza.pdf:PDF},
+  file     = {Gadi2014a -  Modelado y Control de un Dispositivo de Aumento de Fuerza.pdf:..\\..\\Library\\skgadi-articles\\Gadi2014a -  Modelado y Control de un Dispositivo de Aumento de Fuerza.pdf:PDF},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
+
+@Comment{jabref-meta: fileDirectory:../../Library/skgadi-articles;}
+
+@Comment{jabref-meta: protectedFlag:true;}
+
+@Comment{jabref-meta: saveActions:enabled;
+pages[normalize_page_numbers]
+month[normalize_month]
+abstract[html_to_latex]
+booktitle[ordinals_to_superscript]
+;}

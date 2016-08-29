@@ -137,3 +137,19 @@ pre {
     white-space: -o-pre-wrap;    /* Opera 7 */
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
+
+table.NavBar,
+table.NavBar td,
+table.NavBar th,
+table.NavBar tbody {
+	border: 0px solid black;
+}
+
+table.NavBar td a{
+	color: #555555;
+	text-decoration: none;
+}
+
+table.NavBar td a:hover{
+	color: #000000;
+}

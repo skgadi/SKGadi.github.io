@@ -1,3 +1,4 @@
+% Encoding: UTF-8
 %% Books 
 		  
 @Book(robocup99-book,
@@ -4534,6 +4535,8 @@ Reinforcement Learning",
    Carnegie Mellon University", Type="Technical Report",
    Number="CMU-CS-89-210")
 
+@Comment{jabref-meta: databaseType:bibtex;}
+
 %1988
 %1987
 %1986
@@ -4577,5 +4580,3 @@ Reinforcement Learning",
 %      annote="Submitted to IEEE Transactions on Knowledge and Data
 %      Engineering (TKDE)", Year="1996",
 %    note="unpublished")
-
-
