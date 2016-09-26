@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -10,21 +11,10 @@
 	<link type="text/css" rel="stylesheet" href="layout.jquery-dev/layout-default-latest.css" />
 
 	<script src="jquery/external/jquery/jquery.js"></script>
-	<script src="js/scripts.js"></script>
-	<script src="https://apis.google.com/js/client.js?onload=checkAuth"> </script>
 	<script src="bibtex_js.js" type="text/javascript" charset="utf-8"></script>
-	<!--bibtex src="bibtex/skgadi-publications.bib"></bibtex-->
-
-	<!--script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script-->
+	<bibtex src="bibtex/skgadi-publications.bib"></bibtex>
 </head>
 <body class="Font001">
-	<!--pre id="output"></pre-->
-
-	
-	
-	
-	
-	
 <div class="outer-center"> <!--Part of layout-->
 <div class="bibtex_structure">
   <div class="group year" extra="ASC number">
@@ -153,26 +143,95 @@
 						<option value="Vision">Vision</option>
 					</select>
 					<button style=" padding: 0px 6px; font-family: 'Univers57Condensed';" type="button" class="" onclick="reset()">Reset</button>
-					<button id="authorize-div" onclick="handleAuthClick(event)"style=" padding: 0px 6px; font-family: 'Univers57Condensed';" type="button" class="">Authorize</button>
-
 				</div>
 			</div>
 </div>
 <div class="ui-layout-south"><small>Thanks to <a href="https://pages.github.com/">GitHubPages</a>, <a href="http://layout.jquery-dev.com/">UI Layout</a><i>Suresh Kumar Gadi</i></small></div>
 
 
-<script type="text/javascript" src="jquery/jquery-ui.min.js"></script>
-<script type="text/javascript" src="notify.min.js"></script>
-<script type="text/javascript" src="gsk-libs/js/scripts.js"></script>
-
-<script type="text/javascript" src="layout.jquery-dev/jquery.layout-latest.js"></script>
-
-
-
-
+	<script type="text/javascript" src="jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="notify.min.js"></script>
+	<script type="text/javascript" src="gsk-libs/js/scripts.js"></script>
 	
-	
-	
-	
+    <script type="text/javascript" src="layout.jquery-dev/jquery.layout-latest.js"></script>
 </body>
 </html>
+<!--
+
+address
+annote
+author
+booktitle
+chapter
+crossref
+edition
+editor
+howpublished
+institution
+journal
+key
+month
+note
+number
+organization
+pages
+publisher
+school
+series
+title
+type
+volume
+year
+
+
+			<span class="if address"><span class="address"></span>.</span>
+			<span class="if annote"><span class="annote"></span>.</span>
+			<span class="if author"><span class="author"></span>.</span>
+			<span class="if booktitle"><span class="booktitle"></span>.</span>
+			<span class="if chapter"><span class="chapter"></span>.</span>
+			<span class="if crossref"><span class="crossref"></span>.</span>
+			<span class="if edition"><span class="edition"></span>.</span>
+			<span class="if editor"><span class="editor"></span>.</span>
+			<span class="if howpublished"><span class="howpublished"></span>.</span>
+			<span class="if institution"><span class="institution"></span>.</span>
+			<span class="if journal"><span class="journal"></span>.</span>
+			<span class="if key"><span class="key"></span>.</span>
+			<span class="if month"><span class="month"></span>.</span>
+			<span class="if note"><span class="note"></span>.</span>
+			<span class="if number"><span class="number"></span>.</span>
+			<span class="if organization"><span class="organization"></span>.</span>
+			<span class="if pages"><span class="pages"></span>.</span>
+			<span class="if publisher"><span class="publisher"></span>.</span>
+			<span class="if school"><span class="school"></span>.</span>
+			<span class="if series"><span class="series"></span>.</span>
+			<span class="if title"><span class="title"></span>.</span>
+			<span class="if type"><span class="type"></span>.</span>
+			<span class="if volume"><span class="volume"></span>.</span>
+			<span class="if year"><span class="year"></span>.</span>
+
+				<TR class="if address"><TD>address</TD><TD><span class="address"></span></TD></TR>
+				<TR class="if annote"><TD>annote</TD><TD><span class="annote"></span></TD></TR>
+				<TR class="if author"><TD>author</TD><TD><span class="author"></span></TD></TR>
+				<TR class="if booktitle"><TD>booktitle</TD><TD><span class="booktitle"></span></TD></TR>
+				<TR class="if chapter"><TD>chapter</TD><TD><span class="chapter"></span></TD></TR>
+				<TR class="if crossref"><TD>crossref</TD><TD><span class="crossref"></span></TD></TR>
+				<TR class="if edition"><TD>edition</TD><TD><span class="edition"></span></TD></TR>
+				<TR class="if editor"><TD>editor</TD><TD><span class="editor"></span></TD></TR>
+				<TR class="if howpublished"><TD>howpublished</TD><TD><span class="howpublished"></span></TD></TR>
+				<TR class="if institution"><TD>institution</TD><TD><span class="institution"></span></TD></TR>
+				<TR class="if journal"><TD>journal</TD><TD><span class="journal"></span></TD></TR>
+				<TR class="if key"><TD>key</TD><TD><span class="key"></span></TD></TR>
+				<TR class="if month"><TD>month</TD><TD><span class="month"></span></TD></TR>
+				<TR class="if note"><TD>note</TD><TD><span class="note"></span></TD></TR>
+				<TR class="if number"><TD>number</TD><TD><span class="number"></span></TD></TR>
+				<TR class="if organization"><TD>organization</TD><TD><span class="organization"></span></TD></TR>
+				<TR class="if pages"><TD>pages</TD><TD><span class="pages"></span></TD></TR>
+				<TR class="if publisher"><TD>publisher</TD><TD><span class="publisher"></span></TD></TR>
+				<TR class="if school"><TD>school</TD><TD><span class="school"></span></TD></TR>
+				<TR class="if series"><TD>series</TD><TD><span class="series"></span></TD></TR>
+				<TR class="if title"><TD>title</TD><TD><span class="title"></span></TD></TR>
+				<TR class="if type"><TD>type</TD><TD><span class="type"></span></TD></TR>
+				<TR class="if volume"><TD>volume</TD><TD><span class="volume"></span></TD></TR>
+				<TR class="if year"><TD>year</TD><TD><span class="year"></span></TD></TR>
+
+-->
