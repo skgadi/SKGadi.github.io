@@ -1,0 +1,30 @@
+/*Start font*/
+@font-face {
+	font-family: 'Univers57Condensed';
+	src: url('uc-font/ufonts.com_univers_57_condensed.eot');
+	src: local('☺'), url('uc-font/ufonts.com_univers_57_condensed.woff') format('woff'), url('uc-font/ufonts.com_univers_57_condensed.ttf') format('truetype'), url('uc-font/ufonts.com_univers_57_condensed.svg') format('svg'), url('uc-font/ufonts.com_univers_57_condensed.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Univers57Condensed';
+	src: url('uc-font/ufonts.com_univers_57_condensed_bold.eot');
+	src: local('☺'), url('uc-font/ufonts.com_univers_57_condensed_bold.woff') format('woff'), url('uc-font/ufonts.com_univers_57_condensed_bold.ttf') format('truetype'), url('uc-font/ufonts.com_univers_57_condensed_bold.svg') format('svg'), url('uc-font/ufonts.com_univers_57_condensed_bold.eot?#iefix') format('embedded-opentype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Univers57Condensed';
+	src: url('uc-font/ufonts.com_univers_57_condensed_italic.eot');
+	src: local('☺'), url('uc-font/ufonts.com_univers_57_condensed_italic.woff') format('woff'), url('uc-font/ufonts.com_univers_57_condensed_italic.ttf') format('truetype'), url('uc-font/ufonts.com_univers_57_condensed_italic.svg') format('svg'), url('uc-font/ufonts.com_univers_57_condensed_italic.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Univers57Condensed';
+	src: url('uc-font/ufonts.com_univers_57_condensed_bold_oblique.eot');
+	src: local('☺'), url('uc-font/ufonts.com_univers_57_condensed_bold_oblique.woff') format('woff'), url('uc-font/ufonts.com_univers_57_condensed_bold_oblique.ttf') format('truetype'), url('uc-font/ufonts.com_univers_57_condensed_bold_oblique.svg') format('svg'), url('uc-font/ufonts.com_univers_57_condensed_bold_oblique.eot?#iefix') format('embedded-opentype');
+	font-weight: bold;
+	font-style: italic;
+}
+/*End font*/

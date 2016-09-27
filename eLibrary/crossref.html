@@ -1,0 +1,77 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Add material to your library with crossref</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="stylesheet" href="css/font-cm.css">
+	<link rel="stylesheet" href="css/font-uc.css">
+	<link rel="stylesheet" href="css/web-style.css">
+	
+	<link type="text/css" rel="stylesheet" href="libs/layout.jquery-dev/layout-default-latest.css" />
+
+	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+	<script type="text/javascript">
+	function search(){
+		var query = encodeURI($("#searchbar").val());
+		console.log(query);
+		$.get( "http://api.crossref.org/works?query="+query, function( data ) {
+			console.log(data);
+			$( "#ListHere" ).html("");
+			if (data.status == "ok")
+				if (data.message.items.length>0)
+					for (var i=0; i<data.message.items.length; i++) {
+						$( "#ListHere" ).text($( "#ListHere" ).text()+i+";");
+						console.log(i+';');
+					}
+					
+				//alert( "Load was performed." );
+		});
+	}
+	</script>
+	<script src="https://apis.google.com/js/client.js?onload=checkAuth"> </script>
+	<script src="libs/bibtex_js.js" type="text/javascript" charset="utf-8"></script>
+	<!--bibtex src="bibtex/skgadi-publications.bib"></bibtex-->
+
+	<!--script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script-->
+</head>
+<body class="Font001">
+	<!--pre id="output"></pre-->
+
+	
+	
+	
+	
+	
+<div class="outer-center">
+<div id="ListHere">hey</div>
+</div>
+
+<div class="outer-east"><div id="PutHTMLHere" style="padding: 5px; text-align: justify; font-family: 'cmu_serif'">Select an entry to view the complete details here.</div></div>
+
+<div class="ui-layout-north">
+	<div style="width: 60px; display: inline-block;">
+		<a href="/" class="GSKLogo">SKGadi</a>
+	</div>
+	<input style="width: 300px; height: 18px;" type="text" class="SKGSearchItem" id="searchbar" placeholder="Search from crossref.org"/>
+	<button style="padding: 0px 6px; font-family: 'Univers57Condensed';" type="button" class="" onclick="search()">Search</button>
+</div>
+<div class="outer-west"><div id="NavBarHere"></div></div>
+<div class="ui-layout-south" id="FooterHere"></div>
+
+
+
+
+<script   src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"   integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="   crossorigin="anonymous"></script>
+<script type="text/javascript" src="libs/notify.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="libs/layout.jquery-dev/jquery.layout-latest.js"></script>
+
+
+
+
+	
+	
+	
+	
+</body>
+</html>
