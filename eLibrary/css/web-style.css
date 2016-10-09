@@ -223,3 +223,7 @@ table.NavBar td a:hover{
 .Authrozed {
 	display: none;
 }
+
+a {
+	cursor: pointer;
+}

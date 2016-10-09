@@ -10,6 +10,7 @@
 
 <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 <script type="text/javascript">
+var dbFileName = "SKGadiReferenceManager";
 var CLIENT_ID = '283101023526-4o4jti8tl8cusebbogg2qlhpva45uon1.apps.googleusercontent.com';
 var SCOPES = ["https://www.googleapis.com/auth/spreadsheets",
 	"https://www.googleapis.com/auth/drive",
@@ -34,6 +35,7 @@ function handleAuthResult(authResult) {
 	if (authResult && !authResult.error) {
 		authorizeDiv.style.display = 'none';
 		$(".Authrozed ").css('display','inline');
+		$('#BibTeXCode').focus();
 		loadSheetsApi();
 	} else {
 		authorizeDiv.style.display = 'inline';
@@ -61,7 +63,7 @@ function loadSheetsApi() {
 
 function listFiles() {
 	var request = gapi.client.drive.files.list({
-			'q' : 'name=\'SKGadiReferenceManager\'',
+			'q' : 'name=\''+dbFileName+'\'',
 			'pageSize' : 10,
 			'fields' : "nextPageToken, files(id, name)"
 		});
@@ -76,6 +78,7 @@ function listFiles() {
 			//GetBibTexString(files[0].id);
 		} else {
 			//appendPre('No files found.');
+			$.notify("No database file is found. Please wait while we create one for you.", "error");
 			SpreadsheetCreate()
 		}
 	});
@@ -89,7 +92,7 @@ function SpreadsheetCreate(AddItem) {
 	});*/
 	gapi.client.sheets.spreadsheets.create({
 		"properties" : {
-			"title" : "SKGadiReferenceManager"
+			"title" : dbFileName
 		},
 		sheets : [{
 				"properties" : {
@@ -139,7 +142,7 @@ function AddToSheet (event) {
 		$.notify("BibTeX can not be empty", "alert");
 	else {
 		var request = gapi.client.drive.files.list({
-				'q' : 'name=\'SKGadiReferenceManager\'',
+				'q' : 'name=\''+dbFileName+'\'',
 				'pageSize' : 10,
 				'fields' : "nextPageToken, files(id, name)"
 			});
@@ -155,12 +158,13 @@ function AddToSheet (event) {
 					"values": [[$("#BibTeXCode").val()]]
 				}).then(function (response) {
 					$.notify("The BibTeX is successfully added to your library.", "success");
-					//listFiles();
-					//console.log(JSON.parse(response.body).sheets[0].properties.title);
-					//console.log(JSON.parse(response));
-
+					$("#BibTeXCode").val('');
+					setTimeout(function() {
+						$('#BibTeXCode').focus();
+					}, 0);
 				});
 			} else {
+				$.notify("No database file is found. Please wait while we create one for you.", "error");
 				SpreadsheetCreate(true);
 			}
 		});
