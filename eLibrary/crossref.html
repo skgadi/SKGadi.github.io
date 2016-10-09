@@ -20,7 +20,7 @@
 			if (data.status == "ok")
 				if (data.message.items.length>0)
 					for (var i=0; i<data.message.items.length; i++) {
-						$( "#ListHere" ).text($( "#ListHere" ).text()+i+";");
+						$( "#ListHere" ).append("<li class='SKGListItem'>"+i+"</li><br/>");
 						console.log(i+';');
 					}
 					
@@ -43,7 +43,15 @@
 	
 	
 <div class="outer-center">
-<div id="ListHere">hey</div>
+<div>
+<ul id="ListHere">
+	<li class="SKGListItem">hello</li>
+	<br/>
+	<li class="SKGListItem">hello</li>
+	<br/>
+	<li class="SKGListItem">hello</li>
+	</ul>
+</div>
 </div>
 
 <div class="outer-east"><div id="PutHTMLHere" style="padding: 5px; text-align: justify; font-family: 'cmu_serif'">Select an entry to view the complete details here.</div></div>
@@ -53,7 +61,7 @@
 		<a href="/" class="GSKLogo">SKGadi</a>
 	</div>
 	<input style="width: 300px; height: 18px;" type="text" class="SKGSearchItem" id="searchbar" placeholder="Search from crossref.org"/>
-	<button style="padding: 0px 6px; font-family: 'Univers57Condensed';" type="button" class="" onclick="search()">Search</button>
+	<button style="padding: 0px 6px; font-family: 'Univers57Condensed';" type="button" class="Button" onclick="search()">Search</button>
 </div>
 <div class="outer-west"><div id="NavBarHere"></div></div>
 <div class="ui-layout-south" id="FooterHere"></div>

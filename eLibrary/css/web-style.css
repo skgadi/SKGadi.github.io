@@ -68,18 +68,23 @@ ul {
 .SKGListItem {
 	text-align: justify;
 	display: block;
-	background-color: #a4b357;
-	border-left: 5px solid #222;
-	border-right: 5px solid #222;
+	background-color: #F5F5DC;
+	border-left: 5px solid #eee;
+	border-right: 5px solid #eee;
 	padding: 0px 10px;
 	text-decoration:none;
-	color: #555555;
+	color: #000;
 	cursor: pointer;
+	
+	-webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+
 }
 .SKGListItem:hover {
-	border-left: 5px solid #1CE853;
-	border-right: 5px solid #1CE853;
-	color: #000000;
+	border-left: 5px solid #000;
+	border-right: 5px solid #000;
+	background-color: #BDB76B;
+	color: #fff;
 }
 
 /*
@@ -125,14 +130,20 @@ li a:hover {
    color:    #000;
 }
 
-table {
+table.ContentTable  {
 	border-collapse: collapse;
 	width: 100%;
+	cursor: pointer;
 }
 
-table, th, td {
-	border: 1px solid black;
+table.ContentTable, table.ContentTable th, table.ContentTable td {
+	padding: 5px;
+	border: 5px solid #4e95f4;
 }
+table.ContentTable tr:nth-child(even) {background: #b8d1f3}
+table.ContentTable tr:nth-child(odd) {background: #dae5f4}
+
+table.ContentTable tr:hover {background: #E5F8B3}
 
 .YEAR {
 	margin: 0px;
@@ -146,19 +157,65 @@ pre {
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
+table.NavBar {
+	width: 100%;
+}
+table.NavBar td:first-child{
+   text-align: left;
+}
+
+table.NavBar td:nth-child(2){
+   text-align: right;
+}
 table.NavBar,
 table.NavBar td,
 table.NavBar th,
 table.NavBar tbody {
 	border: 0px solid black;
+	color: #aaa;
 }
 
 table.NavBar td a{
-	width: 100%;
-	color: #555555;
+	color: #aaa;
 	text-decoration: none;
 }
 
 table.NavBar td a:hover{
 	color: #000000;
+}
+
+
+.BibTeXRawCodeBlock {
+	border: 5px solid #4e95f4;
+	padding: 5px;
+	word-wrap: break-word;
+	background: #dae5f4;
+	cursor: pointer;
+}
+
+.BibTeXRawCodeBlock:hover {
+	background: #E5F8B3;
+}
+/*
+.Button {
+    background-color: #dae5f4;
+    border: none;
+	cursor: pointer;
+}
+
+.Button:hover {
+    background-color: #fff;
+}
+*/
+.Button {
+    border: none;
+	cursor: pointer;
+	background-color: #FFFFF0;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.Button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
 }

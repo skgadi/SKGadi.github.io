@@ -1,0 +1,43 @@
+ <html>
+ <head>
+<script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+<script>
+// Initialize Firebase
+var config = {
+	apiKey: "AIzaSyC88IiFsTTX-5BVNb7Yibxw0b3zbZCIGQo",
+	authDomain: "elibrary-1df61.firebaseapp.com",
+	databaseURL: "https://elibrary-1df61.firebaseio.com",
+	storageBucket: "elibrary-1df61.appspot.com",
+	messagingSenderId: "786256547768"
+};
+firebase.initializeApp(config);
+</script>
+<script src="https://www.gstatic.com/firebasejs/ui/live/0.5/firebase-ui-auth.js"></script>
+<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/live/0.5/firebase-ui-auth.css" />
+
+<script type="text/javascript">
+  // FirebaseUI config.
+  var uiConfig = {
+	'signInSuccessUrl': 'view.html',
+	'signInOptions': [
+	  // Leave the lines as is for the providers you want to offer your users.
+	  firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+	  firebase.auth.EmailAuthProvider.PROVIDER_ID
+	],
+	// Terms of service url.
+	'tosUrl': 'tos.html',
+  };
+
+  // Initialize the FirebaseUI Widget using Firebase.
+  var ui = new firebaseui.auth.AuthUI(firebase.auth());
+  // The start method will wait until the DOM is loaded.
+  ui.start('#firebaseui-auth-container', uiConfig);
+</script>
+ </head>
+ <body>
+ <!-- The surrounding HTML is left untouched by FirebaseUI.
+         Your app may use that space for branding, controls and other customizations.-->
+    <h1>Welcome to My Awesome App</h1>
+    <div id="firebaseui-auth-container"></div>
+ </body>
+ </html>
