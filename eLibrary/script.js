@@ -118,6 +118,13 @@ function CopyTheText(Code) {
 	$.notify("This BibTeX code is coppied to your clipboard", "success");
 }
 
+function CopyThePrevText(Code) {
+	code = $(Code).prev().get( 0 );
+	console.log(code);
+	copyToClipboard(code);
+	$.notify("This BibTeX code is coppied to your clipboard", "success");
+}
+
 function download(filename, text) {
 	var element = document.createElement('a');
 	element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));

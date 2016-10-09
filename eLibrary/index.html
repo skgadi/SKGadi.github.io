@@ -85,7 +85,7 @@
 	function GetBibTexString(id) {
 		gapi.client.sheets.spreadsheets.values.get({
 			spreadsheetId : id,
-			range : 'db!A1:D',
+			range : 'db!A1:A',
 		}).then(function (response) {
 			var range = response.result;
 			if (range.values.length > 0) {
@@ -93,13 +93,13 @@
 				for (i = 0; i < ((range.values.length)-1); i++) {
 					/*var row = range.values[i];
 					appendPre(row[0] + ', ' + row[3]);*/
-					bibstring += '\n' + range.values[i+1][3] + '\n';
+					bibstring += '\n' + range.values[i+1][0] + '\n';
 				}
 				(new BibtexDisplay()).displayBibtex(bibstring, $("#bibtex_display"));
 				 loadExtras();
-				appendPre(bibstring);
+				//appendPre(bibstring);
 			} else {
-				appendPre('No data found.');
+				//appendPre('No data found.');
 			}
 		});
 	}
@@ -121,42 +121,6 @@
 					"data" : [{
 							"startRow" : 0,
 							"startColumn" : 0,
-							"rowData" : [{
-									"values" : [{
-											"userEnteredValue" : {
-												"stringValue" : "title"
-											}
-										}
-									]
-								}
-							]
-						}, {
-							"startRow" : 0,
-							"startColumn" : 1,
-							"rowData" : [{
-									"values" : [{
-											"userEnteredValue" : {
-												"stringValue" : "authors"
-											}
-										}
-									]
-								}
-							]
-						}, {
-							"startRow" : 0,
-							"startColumn" : 2,
-							"rowData" : [{
-									"values" : [{
-											"userEnteredValue" : {
-												"stringValue" : "year"
-											}
-										}
-									]
-								}
-							]
-						}, {
-							"startRow" : 0,
-							"startColumn" : 3,
 							"rowData" : [{
 									"values" : [{
 											"userEnteredValue" : {
@@ -231,13 +195,13 @@
 				<br/>
 				<div class="if abstract"><span style="font-family: 'cmu_serif'; font-weight: bold; text-align: center; margin: 0px;">Abstract:&ndash; </span><span class="abstract" style="font-family: 'cmu_serif'; font-weight: normal; text-align: justify;"></span></div>
 				<br/>
-				<b>Information:</b>
+				<b>More information:</b>
 				<table class="ContentTable">
-					<TR class="if title"><TD>Title</TD><TD><span class="title"></span></TD></TR>
+					<!--TR class="if title"><TD>Title</TD><TD><span class="title"></span></TD></TR>
 					<TR class="if author"><TD>Author</TD><TD><span class="author"></span></TD></TR>
 					<TR class="if organization"><TD>Organization</TD><TD><span class="organization"></span></TD></TR>
 					<TR class="if booktitle"><TD>Book Title</TD><TD><span class="booktitle"></span></TD></TR>
-					<TR class="if abstract"><TD>Abstract</TD><TD><span class="abstract"></span></TD></TR>
+					<TR class="if abstract"><TD>Abstract</TD><TD><span class="abstract"></span></TD></TR-->
 
 					<TR class="if address"><TD>Address</TD><TD><span class="address"></span></TD></TR>
 					<TR class="if annote"><TD>Annote</TD><TD><span class="annote"></span></TD></TR>
@@ -262,7 +226,11 @@
 					<TR class="if volume"><TD>Volume</TD><TD><span class="volume"></span></TD></TR>
 					<TR class="if year"><TD>Year</TD><TD><span class="year"></span></TD></TR>
 				</table>
+				<br/>
+				<div style="position: relative;">
 				<pre class = "BibTeXRawCodeBlock" onclick="SelectTheText(this)" ondblclick="CopyTheText(this);"><span class="bibtexraw noread"></span></pre>
+				<a style="display: float;position: absolute; bottom: 0px; right: 5px; font-size: 40px; cursor: pointer;" onclick="CopyThePrevText(this)">&#x2398;</a>
+				</div>
 				<a  style="cursor: pointer; font-size: 50px;" class="bibtexVar" onclick="OpenFile('+BIBTEXKEY+')" extra="BIBTEXKEY">&#x1F4C1;</a>
 			</div>
 		</li></ul>
@@ -276,10 +244,10 @@
 <div class="ui-layout-north" style="background: #FFFFF0;">
 			<div class="searchbar">
 				<div style="align-text: center;">
-					<div style="width: 60px; display: inline-block;">
-						<a href="/" class="GSKLogo">SKGadi</a>
+					<div style="width: 120px; display: inline-block;">
+						<a href="/eLibrary" class="GSKLogo">SKGadi's eLibrary</a>
 					</div>
-					<button id="authorize-div" onclick="handleAuthClick(event)"style=" padding: 0px 6px; font-family: 'Univers57Condensed'; display: none;" type="button" class="Button">Authorize</button>
+					<button id="authorize-div" onclick="handleAuthClick(event)" style=" padding: 0px 6px; font-family: 'Univers57Condensed'; display: none;" type="button" class="Button">Authorize</button>
 					<input style="height: 18px; background: #FFFFF0;" type="text" class="Authrozed bibtex_search form-control SKGSearchItem" id="searchbar" placeholder="Search - Example: journal 2015 (finds the intersection of the two terms)"/>
 					<select id="authorselectfirst" class="Authrozed bibtex_search bibtex_author SKGSearchItem" style="font-family: 'Univers57Condensed'; background: #FFFFF0; cursor: pointer;" extra="first" search="author">
 						<option value="">Search First Author</option>
