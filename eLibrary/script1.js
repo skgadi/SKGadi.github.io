@@ -6,7 +6,7 @@ else if (PageName == "frmbibtextobooks.html")
 	dbFileName = "SKGadiReferenceManagerBooks";
 else if (PageName == "frmbibtextomypublications.html")
 	dbFileName = "SKGadiReferenceManagerMyPublications";
-
+console.log(dbFileName);
 
 function AuthIsLoaded() {
 	$("#LoadMainHTMLHere").load('body1.html', LoadedMainHTML());
