@@ -66,9 +66,9 @@ function reset() {
 	$("#searchbar").trigger('change');
 }
 
-$(document).ready(function () {
+function ApplyLayout() {
 	// OUTER-LAYOUT
-	$('body').layout({
+	$('.MainHTMLDiv').layout({
 		center__paneSelector : ".outer-center",
 		west__paneSelector : ".outer-west",
 		east__paneSelector : ".outer-east",
@@ -90,7 +90,7 @@ $(document).ready(function () {
 
 	$('#NavBarHere').load('nav.html');
 	$('#FooterHere').load('footer.html');
-});
+}
 
 function DisplayItem(id) {
 	$('#PutHTMLHere').empty();
@@ -167,4 +167,12 @@ function OpenDriveFile(FineNo, IsNew) {
 			$.notify("No database file is found. You have to authorize to proceed. Press the authorize button.", "error");
 		}
 	});
+}
+
+function wait(ms){
+   var start = new Date().getTime();
+   var end = start;
+   while(end < start + ms) {
+     end = new Date().getTime();
+  }
 }

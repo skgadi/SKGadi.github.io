@@ -1,0 +1,91 @@
+<div class="outer-center" style="background: #FFFFF0;">
+	<div class="bibtex_structure">
+	  <div class="group year" extra="ASC number">
+		  <div class="sort title" extra="ASC string">
+			<div class="templates"></div>
+		  </div>
+	  </div>
+	</div>
+	<div id="bibtex_display" style="padding: 5px;">
+		<div class="if bibtex_template" style="display: none;">
+			<ul><li>
+				<span class="SKGListItem bibtexVar" id="bib+BIBTEXKEY+" extra="BIBTEXKEY" onclick="DisplayItem('BIBD+BIBTEXKEY+')">
+					<span class="if title"><span class="title"></span>.</span>
+					<span class="if author"><em><span class="author"></span></em>.</span>
+					<span class="if edition">Edition: <span class="edition"></span>.</span>
+					<span class="if year"><span class="year"></span>.</span>
+				</span>
+				<div style="display: none;" class="bibtexVar" id="BIBD+BIBTEXKEY+" extra="BIBTEXKEY">
+			
+					<div class="if title" ><h1 style="font-family: 'cmu_serif'; font-weight: normal; text-align: center; margin: 0px;"><span class="title"></span></h1></div>
+					<br/>
+					<div class="if author"><h4 style="font-family: 'cmu_serif'; font-weight: normal; text-align: center;  margin: 0px;"><span class="author"></span></h4></div>
+					<div class="if organization"><h4 style="font-family: 'cmu_serif'; font-weight: normal; text-align: center; margin: 0px;"><em><span class="organization"></span></em></h4></div>
+					<div class="if booktitle"><h4 style="font-family: 'cmu_serif'; font-weight: normal; text-align: center; margin: 0px;"><em><span class="booktitle"></span></em></h4></div>
+					<br/>
+					<div class="if abstract"><span style="font-family: 'cmu_serif'; font-weight: bold; text-align: center; margin: 0px;">Abstract:&ndash; </span><span class="abstract" style="font-family: 'cmu_serif'; font-weight: normal; text-align: justify;"></span></div>
+					<br/>
+					<b>More information:</b>
+					<table class="ContentTable">
+						<TR class="if address"><TD>Address</TD><TD><span class="address"></span></TD></TR>
+						<TR class="if annote"><TD>Annote</TD><TD><span class="annote"></span></TD></TR>
+						<TR class="if chapter"><TD>Chapter</TD><TD><span class="chapter"></span></TD></TR>
+						<TR class="if crossref"><TD>Crossref</TD><TD><span class="crossref"></span></TD></TR>
+						<TR class="if doi"><TD>DOI</TD><TD><span style="cursor: pointer;" class="doi" onclick="OpenDOI(this);"></span></TD></TR>
+						<TR class="if edition"><TD>Edition</TD><TD><span class="edition"></span></TD></TR>
+						<TR class="if editor"><TD>Editor</TD><TD><span class="editor"></span></TD></TR>
+						<TR class="if howpublished"><TD>How published</TD><TD><span class="howpublished"></span></TD></TR>
+						<TR class="if institution"><TD>Institution</TD><TD><span class="institution"></span></TD></TR>
+						<TR class="if journal"><TD>Journal</TD><TD><span class="journal"></span></TD></TR>
+						<TR class="if key"><TD>Key</TD><TD><span class="key"></span></TD></TR>
+						<TR class="if month"><TD>Month</TD><TD><span class="month"></span></TD></TR>
+						<TR class="if note"><TD>Note</TD><TD><span class="note"></span></TD></TR>
+						<TR class="if number"><TD>Number</TD><TD><span class="number"></span></TD></TR>
+						<TR class="if pages"><TD>Pages</TD><TD><span class="pages"></span></TD></TR>
+						<TR class="if publisher"><TD>Publisher</TD><TD><span class="publisher"></span></TD></TR>
+						<TR class="if school"><TD>School</TD><TD><span class="school"></span></TD></TR>
+						<TR class="if series"><TD>Series</TD><TD><span class="series"></span></TD></TR>
+						<TR class="if type"><TD>Type</TD><TD><span class="type"></span></TD></TR>
+						<TR class="if url"><TD>URL</TD><TD><span style="cursor: pointer;" class="url" onclick="OpenURL(this);"></span></TD></TR>
+						<TR class="if volume"><TD>Volume</TD><TD><span class="volume"></span></TD></TR>
+						<TR class="if year"><TD>Year</TD><TD><span class="year"></span></TD></TR>
+					</table>
+					<br/>
+					<div style="position: relative;">
+					<pre class = "BibTeXRawCodeBlock" onclick="SelectTheText(this)" ondblclick="CopyTheText(this);"><span class="bibtexraw noread"></span></pre>
+					<a style="display: float;position: absolute; bottom: 0px; right: 5px; font-size: 40px; cursor: pointer;" onclick="CopyThePrevText(this)">&#x2398;</a>
+					</div>
+					<p>Search this material in your cloud storage:</p>
+					<img  style="cursor: pointer; height: 50px;" class="bibtexVar" onclick="OpenFile('+BIBTEXKEY+',1)" extra="BIBTEXKEY" src="images/logo-mega.png"></img>
+					<img  style="cursor: pointer; height: 50px;" class="bibtexVar" onclick="OpenFile('+BIBTEXKEY+',2)" extra="BIBTEXKEY" src="images/logo-drive.png"></img>
+				</div>
+			</li></ul>
+		</div>
+	</div>
+</div>
+<div class="outer-east" style="background: #FFFFF0;"><div id="PutHTMLHere" style="padding: 5px; text-align: justify; font-family: 'cmu_serif';">Select an entry to view the complete details here.</div></div>
+
+<div class="ui-layout-north" style="background: #FFFFF0;">
+	<div class="searchbar">
+		<div style="align-text: center;">
+			<div style="width: 120px; display: inline-block;">
+				<a onclick="window.location.reload()" class="GSKLogo">SKGadi's eLibrary</a>
+			</div>
+			<button id="authorize-div" onclick="handleAuthClick(event)" style=" padding: 0px 6px; font-family: 'Univers57Condensed'; display: none;" type="button" class="Button">Authorize</button>
+			<input style="height: 18px; background: #FFFFF0;" type="text" class="Authrozed bibtex_search form-control SKGSearchItem" id="searchbar" placeholder="Search - Example: journal 2015 (finds the intersection of the two terms)"/>
+			<select id="authorselectfirst" class="Authrozed bibtex_search bibtex_author SKGSearchItem" style="font-family: 'Univers57Condensed'; background: #FFFFF0; cursor: pointer;" extra="first" search="author">
+				<option value="">Search First Author</option>
+			</select>
+			<select id="authorselect" class="Authrozed bibtex_search bibtex_author SKGSearchItem" style="font-family: 'Univers57Condensed'; background: #FFFFF0; cursor: pointer;" search="author">
+				<option value="">Search Author</option>
+			</select>
+			<select id="topicselect" class="Authrozed bibtex_search SKGSearchItem" style="font-family: 'Univers57Condensed'; background: #FFFFF0; cursor: pointer;">
+			</select>
+			<button style=" padding: 0px 6px; font-family: 'Univers57Condensed';" type="button"  class="Authrozed Button" onclick="reset()">Reset</button>
+			<button style=" padding: 0px 6px; font-family: 'Univers57Condensed';" type="button"  class="Authrozed Button" onclick="download('refs.bib',bibstring)"><small>&#x1f4be;</small>BibTeX</button>
+		</div>
+	</div>
+</div>
+<div class="outer-west" style="background: #FFFFF0;"><div id="NavBarHere"></div></div>
+<div class="ui-layout-south" id="FooterHere" style="background: #FFFFF0;"></div>
+

@@ -1,16 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Add from BibTeX</title>
+var PageName = window.location.pathname.split("/").pop().toLowerCase();
+var dbFileName;
+if (PageName == "" || PageName == "frmbibtextoarticles.html")
+	dbFileName = "SKGadiReferenceManagerArticles";
+else if (PageName == "frmbibtextobooks.html")
+	dbFileName = "SKGadiReferenceManagerBooks";
+else if (PageName == "frmbibtextomypublications.html")
+	dbFileName = "SKGadiReferenceManagerMyPublications";
 
-<link rel="stylesheet" href="css/font-cm.css">
-<link rel="stylesheet" href="css/font-uc.css">
-<link rel="stylesheet" href="css/web-style.css">
 
-<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
-<script type="text/javascript">
-var dbFileName = "SKGadiReferenceManager";
+function AuthIsLoaded() {
+	$("#LoadMainHTMLHere").load('body1.html', LoadedMainHTML());
+}
+function LoadedMainHTML () {
+	checkAuth();
+}
+var dbFileName = "SKGadiReferenceManagerArticles";
 var CLIENT_ID = '283101023526-4o4jti8tl8cusebbogg2qlhpva45uon1.apps.googleusercontent.com';
 var SCOPES = ["https://www.googleapis.com/auth/spreadsheets",
 	"https://www.googleapis.com/auth/drive",
@@ -35,12 +39,14 @@ function handleAuthResult(authResult) {
 	if (authResult && !authResult.error) {
 		authorizeDiv.style.display = 'none';
 		$(".Authrozed ").css('display','inline');
-		$('#BibTeXCode').focus();
 		loadSheetsApi();
 	} else {
 		authorizeDiv.style.display = 'inline';
 		$(".Authrozed ").css('display','none');
 	}
+	$(".HideWhenLoaded").css("display", "none");
+	$(".ShowWhenLoaded").css("display", "block");
+	$('#BibTeXCode').focus();
 }
 
 function handleAuthClick(event) {
@@ -71,25 +77,14 @@ function listFiles() {
 	request.execute(function (resp) {
 		var files = resp.files;
 		if (files && files.length > 0) {
-			/*for (var i = 0; i < files.length; i++) {
-			var file = files[i];
-			appendPre(file.name + ' (' + file.id + ')');
-			}*/
-			//GetBibTexString(files[0].id);
 		} else {
-			//appendPre('No files found.');
 			$.notify("No database file is found. Please wait while we create one for you.", "error");
-			SpreadsheetCreate()
+			SpreadsheetCreate(false)
 		}
 	});
 }
 
 function SpreadsheetCreate(AddItem) {
-	/*var URI = "https://www.googleapis.com/drive/v3/files?corpus=user&q=name%3D%22temp%22&key="+CLIENT_ID;
-	$.post(URI, function (data) {
-
-	alert(JSON.stringify(data, null, 4));
-	});*/
 	gapi.client.sheets.spreadsheets.create({
 		"properties" : {
 			"title" : dbFileName
@@ -116,20 +111,13 @@ function SpreadsheetCreate(AddItem) {
 			}
 		]
 	}).then(function (response) {
+		wait(5000);
 		$.notify("File created.", "success");
 		if (AddItem)
 			AddToSheet();
-		//listFiles();
-		//console.log(JSON.parse(response.body).sheets[0].properties.title);
-		//console.log(JSON.parse(response));
-
 	});
 }
 
-/*$(document).ready(function () {
-	//loadSheetsApi();
-});
-*/
 function onSignIn(user) {
 	var profile = user.getBasicProfile();
 	$('#profile .name').text(profile.getName());
@@ -170,19 +158,3 @@ function AddToSheet (event) {
 		});
 	}
 }
-</script>
-<script src="https://apis.google.com/js/client.js?onload=checkAuth"> </script>
-
-</head>
-<body style="width: 100%; height: 100%; padding: 0px; margin: 0px; font-family: 'cmu_serif'; overflow: scroll;" >
-<center><h1>BibTeX</h1><br/><span class="Authrozed" onclick="handleAuthClick(event)" >Paste the BibTeX code here.</span></center>
-<div style="text-align: center">
-<textarea rows="20" style="width: 95%; background-color: #FFFFF0; border: 5px solid #4e95f4; padding: 5px; font-family: 'Courier'" class="Authrozed" id="BibTeXCode" ></textarea>
-<br/>
-<button id="authorize-div" onclick="handleAuthClick(event)" class="Button" >Authorize</button> <button onclick="AddToSheet()" class="Authrozed Button">Add BibTeX to eLibrary</button>
-</div>
-
-<script type="text/javascript" src="libs/notify.min.js"></script>
-
-</body>
-</html>
