@@ -105,8 +105,11 @@ function OpenURL(URL) {
 	window.open($(URL).text(), '_blank');
 }
 
-function OpenFile(BIBKey) {
-	window.open("https://mega.nz/#fm/search/" + BIBKey, '_blank');
+function OpenFile(BIBKey, Loc) {
+	if (Loc == 1)
+		window.open("https://mega.nz/#fm/search/" + BIBKey, '_blank');
+	else if (Loc == 2)
+		window.open("https://drive.google.com/drive/search?q=" + BIBKey, '_blank');
 }
 
 function SelectTheText(Code) {
@@ -119,7 +122,7 @@ function CopyTheText(Code) {
 }
 
 function CopyThePrevText(Code) {
-	code = $(Code).prev().get( 0 );
+	code = $(Code).prev().get(0);
 	console.log(code);
 	copyToClipboard(code);
 	$.notify("This BibTeX code is coppied to your clipboard", "success");
@@ -138,4 +141,30 @@ function download(filename, text) {
 	document.body.removeChild(element);
 }
 
+function OpenDriveFile(FineNo, IsNew) {
+	if (FineNo == 1)
+		var FileSelected = "SKGadiReferenceManagerTopics";
+	else if (FineNo == 2)
+		var FileSelected = "SKGadiReferenceManagerArticles";
+	else if (FineNo == 3)
+		var FileSelected = "SKGadiReferenceManagerBooks";
+	else if (FineNo == 4)
+		var FileSelected = "SKGadiReferenceManagerMyPublications";
+	var request = gapi.client.drive.files.list({
+			'q' : 'name=\'' + FileSelected + '\'',
+			'pageSize' : 10,
+			'fields' : "nextPageToken, files(id, name)"
+		});
 
+	request.execute(function (resp) {
+		var files = resp.files;
+		if (files && files.length > 0) {
+			if (IsNew)
+				window.open("https://docs.google.com/spreadsheets/d/" + files[0].id + "/edit", "_blank");
+			else
+				window.open("https://docs.google.com/spreadsheets/d/" + files[0].id + "/edit", "_self");
+		} else {
+			$.notify("No database file is found. You have to authorize to proceed. Press the authorize button.", "error");
+		}
+	});
+}
