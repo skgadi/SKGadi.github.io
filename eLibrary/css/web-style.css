@@ -138,12 +138,12 @@ table.ContentTable  {
 
 table.ContentTable, table.ContentTable th, table.ContentTable td {
 	padding: 5px;
-	border: 5px solid #4e95f4;
+	border: 5px solid #ddd;
 }
-table.ContentTable tr:nth-child(even) {background: #b8d1f3}
-table.ContentTable tr:nth-child(odd) {background: #dae5f4}
+table.ContentTable tr:nth-child(even) {background: #FFFFF0}
+table.ContentTable tr:nth-child(odd) {background: #FFF8DC}
 
-table.ContentTable tr:hover {background: #E5F8B3}
+table.ContentTable tr:hover {background: #eee}
 
 .YEAR {
 	margin: 0px;
@@ -186,15 +186,15 @@ table.NavBar td a:hover{
 
 
 .BibTeXRawCodeBlock {
-	border: 5px solid #4e95f4;
+	border: 5px solid #ddd;
 	padding: 5px;
 	word-wrap: break-word;
-	background: #dae5f4;
+	background: #FFF8DC;
 	margin: 0px;
 }
 
 .BibTeXRawCodeBlock:hover {
-	background: #E5F8B3;
+	background: #eee;
 }
 /*
 .Button {
