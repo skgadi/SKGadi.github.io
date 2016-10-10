@@ -14,7 +14,6 @@ function AuthIsLoaded() {
 function LoadedMainHTML () {
 	checkAuth();
 }
-var dbFileName = "SKGadiReferenceManagerArticles";
 var CLIENT_ID = '283101023526-4o4jti8tl8cusebbogg2qlhpva45uon1.apps.googleusercontent.com';
 var SCOPES = ["https://www.googleapis.com/auth/spreadsheets",
 	"https://www.googleapis.com/auth/drive",
