@@ -270,7 +270,7 @@ $(document).keyup(function(e) {
     if (e.keyCode == 27) {
         reset();
     }
-    if (e.keyCode == 32) {
-        $("#SKGSearchItem").focus();
+    if ((e.keyCode == 115) || (e.keyCode == 83)) {
+        $(".SKGSearchItem").focus();
     }
 });
