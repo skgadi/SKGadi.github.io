@@ -271,6 +271,15 @@ $(document).keyup(function(e) {
         reset();
     }
     if ((e.keyCode == 115) || (e.keyCode == 83)) {
-        $(".SKGSearchItem").focus();
+        $("#searchbar").focus();
+    }
+    if ((e.keyCode == 102) || (e.keyCode == 70)) {
+        $("#authorselectfirst").focus();
+    }
+    if ((e.keyCode == 97) || (e.keyCode == 65)) {
+        $("#authorselect").focus();
+    }
+    if ((e.keyCode == 116) || (e.keyCode == 84)) {
+        $("#topicselect").focus();
     }
 });
