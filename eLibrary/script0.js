@@ -267,7 +267,10 @@ function onSignIn(user) {
 }
 
 $(document).keyup(function(e) {
-     if (e.keyCode == 27) {
+    if (e.keyCode == 27) {
         reset();
+    }
+    if (e.keyCode == 32) {
+        $("#SKGSearchItem").focus();
     }
 });
