@@ -266,3 +266,8 @@ function onSignIn(user) {
 	$('#profile .email').text(profile.getEmail());
 }
 
+$(document).keyup(function(e) {
+     if (e.keyCode == 27) {
+        reset();
+    }
+});
