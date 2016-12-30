@@ -1,0 +1,6 @@
+title = "Suresh Kumar Gadi"
+baseurl = "http://suku.ga/"
+languageCode = "en-us"
+[Params]
+  Author = "Suresh Kumar Gadi"
+  disqusShortname = "skgadi"
