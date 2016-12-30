@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Suresh Kumar Gadi</title>
+    <link>//suku.ga/index.xml</link>
+    <description>Recent content on Suresh Kumar Gadi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright &amp;#169; by Suresh Kumar Gadi</copyright>
+    <lastBuildDate>Fri, 30 Dec 2016 06:13:31 -0600</lastBuildDate>
+    <atom:link href="//suku.ga/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>About Suresh Kumar Gadi</title>
+      <link>//suku.ga/about/</link>
+      <pubDate>Fri, 30 Dec 2016 06:13:31 -0600</pubDate>
+      
+      <guid>//suku.ga/about/</guid>
+      <description>&lt;p&gt;Suresh Kumar Gadi is a PhD.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
