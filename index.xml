@@ -2,20 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Suresh Kumar Gadi</title>
-    <link>http://suku.ga/index.xml</link>
+    <link>//suku.ga/index.xml</link>
     <description>Recent content on Suresh Kumar Gadi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Dec 2016 04:22:01 -0600</lastBuildDate>
-    <atom:link href="http://suku.ga/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright &amp;#169; by Suresh Kumar Gadi</copyright>
+    <lastBuildDate>Fri, 30 Dec 2016 06:13:31 -0600</lastBuildDate>
+    <atom:link href="//suku.ga/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>good to great</title>
-      <link>http://suku.ga/post/good-to-great/</link>
-      <pubDate>Fri, 30 Dec 2016 04:22:01 -0600</pubDate>
+      <title>About Suresh Kumar Gadi</title>
+      <link>//suku.ga/about/</link>
+      <pubDate>Fri, 30 Dec 2016 06:13:31 -0600</pubDate>
       
-      <guid>http://suku.ga/post/good-to-great/</guid>
-      <description>&lt;p&gt;I read &lt;strong&gt;Good to Great in January 2016&lt;/strong&gt;. An awesome read sharing detailed analysis on how good companies became great.&lt;/p&gt;
+      <guid>//suku.ga/about/</guid>
+      <description>&lt;p&gt;Suresh Kumar Gadi is a PhD.&lt;/p&gt;
 </description>
     </item>
     
